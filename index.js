@@ -1,25 +1,25 @@
 let countElement = document.getElementById("count-el")
-let count = Number(countElement.innerText)
+let count = Number(countElement.textContent)
 
 let saveElement = document.getElementById("save-el")
 let firstSaveCompleted = false
 
 function increment() {
     count += + 1
-    countElement.innerText = count
+    countElement.textContent = count
 }
 
 function decrement() {
     count -= 1
-    countElement.innerText = count
+    countElement.textContent = count
 }
 
 function save() {
     if(firstSaveCompleted == false){
-        saveElement.innerText += " " + count
+        saveElement.textContent += " " + count
         firstSaveCompleted = true
     } else {
-        saveElement.innerText += ", " + count
+        saveElement.textContent += ", " + count
     }
     console.log(count)
 }
@@ -27,6 +27,6 @@ function save() {
 function reset() {
     count = 0
     firstSaveCompleted = false
-    countElement.innerText = count
-    saveElement.innerText = "Previous Entries:"
+    countElement.textContent = count
+    saveElement.textContent = "Previous Entries:"
 }

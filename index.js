@@ -18,8 +18,14 @@ function save() {
     if(firstSaveCompleted == false){
         saveElement.textContent += " " + count
         firstSaveCompleted = true
+
+        count = 0
+        countElement.textContent = 0
     } else {
         saveElement.textContent += ", " + count
+
+        count = 0
+        countElement.textContent = 0
     }
     console.log(count)
 }
